@@ -50,8 +50,8 @@ public class img extends HttpServlet {
             out.println("<body>");
             if (errorMsg.equals("No errors")) {
                 try {
-                    String imgName = "C:\\Users\\1\\server_images\\" + this.imgName + '.' + this.imgFormat;
-                    BufferedImage bImage = ImageIO.read(new File(imgName));
+                    String imgPath = "C:\\Users\\1\\server_images\\" + imgName + '.' + imgFormat;
+                    BufferedImage bImage = ImageIO.read(new File(imgPath));
                     ByteArrayOutputStream baos = new ByteArrayOutputStream();
                     ImageIO.write(bImage, imgFormat, baos);
                     baos.flush();
